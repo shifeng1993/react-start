@@ -4,17 +4,17 @@ import configureStore from '../stores';
 import {syncHistoryWithStore} from 'react-router-redux'
 
 // 以下是页面引入
-import App from '../containers/App'
-import UserListApp from '../containers/UserListApp'
-import UserDetailApp from '../containers/UserDetailApp'
+import{ Index ,Home, About} from '../containers';
+
 let store = configureStore();
 /* react router 2.x 必须配置 browserHistory */
 const history = syncHistoryWithStore(browserHistory, store);
 const routes = (
     <Router history={history}>
-        <Route path="/" component={App}/>
-        <Route path="/users" component={UserListApp}/>
-        <Route path="/users/:id" component={UserDetailApp}/>
+        <Route path="/" component={Index}>
+            <Route path="/home" component={Home}/>
+            <Route path="/about" component={About}/>
+        </Route>
     </Router>
 );
 
