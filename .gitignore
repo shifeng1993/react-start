@@ -11,7 +11,7 @@
 
 # misc
 /.idea
-.vscode
+/.vscode
 .DS_Store
 .env
 npm-debug.log*
