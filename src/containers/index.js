@@ -1,5 +1,6 @@
+import App from './App';
+import Index from './Index/index.js';
 import About from './About/index.js';
 import Home from './Home/index.js';
-import Index from './Index/index.js';
 
-export { About, Home, Index };
+export {Index, About, Home, App};

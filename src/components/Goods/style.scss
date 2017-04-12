@@ -1,0 +1,17 @@
+.goods-wrap {
+  display: inline-block;
+  width: 70%;
+  .good-item {
+    float: left;
+    width: 130px;
+    border: 1px solid #aaa;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px 0;
+    text-align: center;
+    cursor:pointer;
+    &:hover {
+      border: 1px solid #fff000;
+    }
+  }
+}

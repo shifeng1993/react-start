@@ -1,0 +1,20 @@
+.keyboard-wrap{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    .keyboard-item {
+    float: left;
+    width: 130px;
+    height: 44px;
+    line-height: 34px;
+    border: 1px solid #aaa;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px 0;
+    text-align: center;
+    cursor:pointer;
+    &:hover {
+      border: 1px solid #fff000;
+    }
+  }
+}

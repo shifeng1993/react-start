@@ -2,7 +2,7 @@ const router = require('koa-router')();
 
 /* ================引入逻辑模块=============== */
 // 用户模块
-const user = require('../controllers/user/index.js');
+const index = require('../controllers/index/index.js');
 
 // cors 处理跨域
 router.all('/api/*', async(ctx, next) => {
@@ -19,17 +19,7 @@ router.all('/api/*', async(ctx, next) => {
 
 /* ================以下是api模块=============== */
 
-/* =======用户模块====== */
-// 用户登录
-router.get('/api/login', user.login)
-// // 用户退出
-//     .post('/api/logout', user.logout)
-// // 更改用户资料
-//     .post('/api/put', user.put)
-// // 重置用户密码
-//     .post('/api/resetpwd', user.resetpwd)
-// // 删除用户
-//     .post('/api/deluser', user.deluser)
-/* =======用户模块end====== */
+// 获取商品
+router.get('/api/goods', index.goods)
 
 module.exports = router;

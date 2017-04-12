@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
 import {routerReducer} from 'react-router-redux'
 
-import user from './user';
+import index from './index/index';
 const reducers = {
-    user
+    index
 };
 
 export default combineReducers({
