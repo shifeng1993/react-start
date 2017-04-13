@@ -1,15 +1,18 @@
 .goods-wrap {
   display: inline-block;
-  width: 70%;
+  width: 75%;
   .good-item {
     float: left;
-    width: 130px;
+    width: 140px;
     border: 1px solid #aaa;
     margin: 5px;
     border-radius: 5px;
     padding: 5px 0;
     text-align: center;
-    cursor:pointer;
+    cursor: pointer;
+    p {
+      line-height: 26px
+    }
     &:hover {
       border: 1px solid #fff000;
     }

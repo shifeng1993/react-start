@@ -13,13 +13,6 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "koa": "^2.2.0",
-    "koa-bodyparser": "^4.2.0",
-    "koa-json": "^2.0.2",
-    "koa-onerror": "^3.1.0",
-    "koa-router": "^7.1.1",
-    "koa2-pixie-proxy": "^2.0.3",
-    "mockjs": "^1.0.1-beta3",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
     "react-scripts": "0.9.4"

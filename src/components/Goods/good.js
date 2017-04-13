@@ -7,12 +7,11 @@ class Good extends Component {
 
     render() {
         const {id, name, price} = this.props;
-
         return (
             <div className="good-item">
                 <p>{id}</p>
                 <p>{name}</p>
-                <p>{price * 0.01 + '元'}</p>
+                <p>{!price ? '' : price * 0.01 + '元'}</p>
             </div>
         );
     }
