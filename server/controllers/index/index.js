@@ -1,15 +1,14 @@
-const indexModel = require("../../models/index/index.js");
+const goodModel = require("../../models/goods/index.js");
 
 class indexController {
+    /*mock数据示例*/
     // 获取商品
     static async goods(ctx, next) {
         await next();
         function callback(res) {
             ctx.response.body = res;
         }
-        indexModel.goods('goods', res => callback(res));
-        // await ……
+        goodModel.goods('goods', res => callback(res));
     }
-
 }
 module.exports = indexController;

@@ -1,12 +1,12 @@
 # Koa2APIServer
 一个使用koa2构建的API服务端。
 #### 技术栈：
-- shell
 - nodejs
 - koa2
 - pm2
 - es6/7
 - mockjs
+- koa2-pixie-proxy
 
 ## 使用方法
 
@@ -16,8 +16,8 @@
 
 `npm install`
 
-三选一
-`supervisor app` / `node app` / `./shell.sh`
+二选一
+`supervisor app` / `node app` 
 
 ## 项目结构
 `app.js`为主文件，平时做模拟数据用`supervisor`启动即可（没有的话用npm安装），也可以用`node`启动。
@@ -26,11 +26,7 @@
 
 `controllers`目录下为api数据的控制，更改以及序列化。
 
-`models`目录下为对数据的读写。应以函数式为主要开发思想。
-
-shell守护进程脚本用 `./shell.sh`启动。如果遇到权限错误，请先输入`chmod 777 shell.sh`改写权限后，再行启动。
-
-注意：shell脚本依赖pm2 请先进行全局安装后再启动 `npm install -g pm2`
+`models`目录下为对数据的读写。
 
 ## 版本特性
 #### 1.0.0
@@ -42,8 +38,10 @@ shell守护进程脚本用 `./shell.sh`启动。如果遇到权限错误，请�
 
 4.使用了mockjs模拟假数据。
 
-## 待添加特性
-1.对数据库的支持，读写。
+#### 1.0.1
+1.添加了中间层服务代理支持，在`routes/index.js`内部即可轻松添加，项目不需要则删除。
 
-2.中间层服务代理
+## 待添加特性
+1.对WebSocket的支持。
+
 

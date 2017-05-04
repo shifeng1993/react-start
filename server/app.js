@@ -1,10 +1,3 @@
-/*
- * 名称：koa2mvc服务；
- * 作用：1.使用mock假数据做api服务，2.使用真实数据库做api服务,3.做真实api的代理转发。
- * 技术栈：koa2，es7
- * 作者：haise
- */
-
 /* =================以下是引入模块=======================*/
 const Koa = require('koa');
 const bodyparser = require('koa-bodyparser');
@@ -27,15 +20,15 @@ app.use(bodyparser());
 app.use(json());
 
 //资源加载记录log
-app.use(async (ctx, next) => {
+app.use(async(ctx, next) => {
   const start = new Date();
   await next();
   const ms = new Date() - start;
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 
+// 监听端口开启服务
 app.listen(port, () => console.log("服务已经启动，APIhost：" + host + port));
 
-// 引入路由文件
+/*引入路由文件*/
 app.use(index.routes(), index.allowedMethods());
-
