@@ -1,5 +1,5 @@
 # react-start
-使用create-react-app搭建的一个实用的项目脚手架,以前端开发为主，koa2为辅。目前react版本为15.4.2，会基于项目进行不定时更新。
+使用create-react-app搭建的一个实用的项目脚手架,以前端开发为主，koa2为辅。目前react版本为15.6.1，会基于项目进行不定时更新。
 #### 技术栈：
 - react
 - redux
