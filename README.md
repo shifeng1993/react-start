@@ -1,5 +1,8 @@
 # react-start
-使用create-react-app搭建的一个实用的项目脚手架,以前端开发为主，koa2为辅。目前react版本为15.6.1，会基于项目进行不定时更新。
+使用create-react-app搭建的一个实用的项目脚手架。代理mock端口为3333使用npm run server启动
+
+目前react版本为16.3.2，会基于项目进行不定时更新。
+
 #### 技术栈：
 - react
 - redux
@@ -21,11 +24,9 @@
 
 `cd yourappname`
 
-`npm install`
+`yarn`
 
-如果node-sass安装报错，需再次安装 `npm install node-sass`
-
-#### 运行开发环境
+#### 运行
 
 使用`npm start` 开启react项目
 
@@ -34,12 +35,12 @@
 需先安装supervisor
 `npm install -g supervisor`
 
-#### 编译静态文件
+#### 编译
 
 `npm run build`
 
 ## 更新日志
-0.1.0
+1.0.0
 更新react版本以及react
 
 
