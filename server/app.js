@@ -12,7 +12,6 @@ const index = require('./routes/index');
 onerror(app);
 
 // 定义本地服务端口
-const host = 'http://127.0.0.1:';
 const port = 3333; //设置本地服务端口
 
 // 中间件
@@ -28,7 +27,7 @@ app.use(async(ctx, next) => {
 });
 
 // 监听端口开启服务
-app.listen(port, () => console.log("服务已经启动，APIhost：" + host + port));
+app.listen(port, () => console.log(`服务已经启动，APIhost：http://localhost: ${port}`));
 
 /*引入路由文件*/
 app.use(index.routes(), index.allowedMethods());

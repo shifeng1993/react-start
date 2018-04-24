@@ -28,6 +28,6 @@ router.get('/api/goods', index.goods)
 
 // 代理转发示例 
 
-//router.get('/api/goods',proxy('/api/goods'))
+//router.get('/api/goods',proxy('/api/goods')) 
 
 module.exports = router;

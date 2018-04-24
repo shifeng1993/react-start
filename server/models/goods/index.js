@@ -105,7 +105,6 @@ class goodsModel {
             
         ])
         res(JSON.stringify(data))
-        // await ……
     }
 
 }
