@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom'
 import './style.css'
 
 // 引入action
-import * as indexAction from '../../stores/actions/index/index.js';
+import indexAction from '../../stores/actions/index/index.js';
 
 // 引入组件
 import Goods from '../../components/Goods/index.js';
@@ -17,9 +18,8 @@ class Index extends Component {
         this.state = {}
     }
     componentWillMount() {
-        // 通过cwm周期发起dispatch，dispatch中包含ajax请求。
         const {actions} = this.props;
-        actions.getGoods();
+        actions.getGoods()
     }
 
     // 接受键盘来的商品id
@@ -49,4 +49,5 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch: dispatch
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Index)
+// withRouter获取当前路由信息
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Index));
