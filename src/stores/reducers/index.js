@@ -2,9 +2,9 @@ import {combineReducers} from 'redux';
 
 import index from './index/index';
 const reducers = {
-    index
+  index
 };
 
 export default combineReducers({
-    ...reducers
+  ...reducers
 });

@@ -5,13 +5,11 @@ import configureStore from './stores';
 import routes from './routes';
 import registerServiceWorker from './registerServiceWorker';
 
-let store = configureStore();
-let rootElement = document.getElementById('root');
-
+// 在根组件的render周期内执行store的初始化
 ReactDOM.render(
   <div>
-  <Provider store={store}>
-      {routes}
+  <Provider store={configureStore()}>
+    {routes}
   </Provider>
-</div>, rootElement);
+</div>, document.getElementById('root'));
 registerServiceWorker();

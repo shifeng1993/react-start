@@ -1,4 +1,4 @@
-import {SET_GOODS, SET_GOOD} from '../../constants/ActionTypes';
+import {SET_GOODS, SET_GOOD} from '../../actions/ActionTypes';
 
 let indexState = {
   // 商品数组
